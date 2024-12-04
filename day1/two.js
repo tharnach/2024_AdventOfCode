@@ -19,7 +19,7 @@ lineArray
 leftArray.sort();
 rightArray.sort();
 
-let similarityArray = [];
+const similarityArray = [];
 leftArray.map((value) => {
     const occurences = rightArray.filter((arrayItem) => arrayItem === value).length;
     similarityArray.push(occurences * value)
