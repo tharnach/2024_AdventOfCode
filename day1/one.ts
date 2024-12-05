@@ -1,12 +1,12 @@
-import fs from 'fs'
 import chalk from 'chalk';
 
-const lineArray = fs.readFileSync('./input.txt')
-    .toString()
-    .split("\n");
+const path = "day1/input.txt";
+const file = Bun.file(path);
+const text = await file.text();
+const lineArray = text.split("\n");
 
-const leftArray = [];
-const rightArray = [];
+const leftArray: number[] = [];
+const rightArray: number[] = [];
 
 
 lineArray
